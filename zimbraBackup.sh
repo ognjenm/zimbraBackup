@@ -12,9 +12,9 @@
 # yum install epel-release                                                    #
 # yum install parallel gawk bzip2 iproute                                     #
 # # rpm -qa | grep parallel                                                   #
-#parallel-20160222-1.el7.noarch                                               #
+# parallel-20151122-1.gf.el6.noarch                                              #
 #                                                                             #
-# CentOS 6: https://gist.github.com/mkubenka/434422ca63e4fc647d6bce579e8c20f8 #
+# CentOS 6: yum install http://mirror.ghettoforge.org/distributions/gf/el/6/plus/x86_64/parallel-20151122-1.gf.el6.noarch.rpm #
 #                                                                             #
 # Script to backup Zimbra (MySQL + OpenLDAP + Mail + Contacts + Calendar +    #
 #   Tasks + Lists + User Attributes)                                          #
@@ -93,8 +93,8 @@ mysqldump="/opt/zimbra/mysql/bin/mysqldump"
 mysqlsock="/opt/zimbra/db/mysql.sock"
 zmlocalconfig="/opt/zimbra/bin/zmlocalconfig"
 zmslapcat="/opt/zimbra/libexec/zmslapcat"
-parallel="/bin/parallel"
-backupDir="/opt/backupZimbra"
+parallel="/usr/bin/parallel"
+backupDir="/media/backup"
 allEmails="${backupDir}/allEmails.txt"
 allLists="${backupDir}/allLists.txt"
 backupParallel="${backupDir}/backupParallel.txt"
